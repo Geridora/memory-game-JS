@@ -19,6 +19,7 @@ function flipCard () {
     checkForMatch();
 }
 
+//function used to check if the flipped cards match one another
 function checkForMatch() {
     if(firstCard.dataset.card === secondCard.dataset.card){
         disableCards();
@@ -28,6 +29,7 @@ function checkForMatch() {
     unFlipCards();
 }
 
+//disables the cards if they match
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -35,6 +37,7 @@ function disableCards() {
     resetBoard();
 }
 
+//flip the cards back if they don't match
 function unFlipCards() {
     lockBoard = true;
 
@@ -51,6 +54,7 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
+//shuffles the order of the cards each time the game restarts
 (function shuffle(){
     cards.forEach((card) => {
         let randomPosition = Math.floor(Math.random() * 12);

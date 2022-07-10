@@ -52,7 +52,7 @@ body {
     transform: rotateY(180deg);
 }
 
-/*Animação de flip*/
+/*Flip animation*/
 
 .card.flip {
     transform:rotateY(180deg);
